@@ -4,9 +4,9 @@ Deque:
 ```java
 Deque<String> deque = new LinkedList<String>();
 
-deque.push("1");
-deque.push("2");
-deque.push("3");
+deque.push("a");
+deque.push("b");
+deque.push("c");
 System.out.println(deque);
 
 String str = deque.peek();
@@ -22,14 +22,13 @@ System.out.println(deque);
 Add first/Add last:
 ```java
 Deque<String> deque = new LinkedList<>();
-deque.addFirst("1"); //头部插入元素
-deque.addFirst("2");
-deque.addLast("3"); //尾部插入元素
+deque.addFirst("a"); //头部插入元素
+deque.addFirst("b");
+deque.addLast("c"); //尾部插入元素
 System.out.println(deque);
 
-System.out.println(deque.pollFirst());  //输出头部元素
-System.out.println(deque);
-System.out.println(deque.pollLast());   // 输出尾部元素  
+String str = deque.peekLast();
+System.out.println(str);    //输出尾部元素
 System.out.println(deque);
 while (deque.size()>0){
     System.out.println(deque.pop()); //逐个输出
